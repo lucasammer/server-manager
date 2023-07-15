@@ -6,7 +6,7 @@ namespace server_manager
 {
     class strings
     {
-        public static enum dicts
+        public enum dicts
         {
             errors,
             notice,
