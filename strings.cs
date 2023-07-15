@@ -6,7 +6,7 @@ namespace server_manager
 {
     class strings
     {
-        public enum dicts
+        public static enum dicts
         {
             errors,
             notice,
@@ -23,6 +23,7 @@ namespace server_manager
                 errors.Add("noValue", "No value set!");
                 errors.Add("notInArgs", "Arguement not found in args");
                 errors.Add("invalidDict", "Dictonary invalid");
+                errors.Add("cmdNotFound", "Command not found");
 
                 // Notices
                 notice.Add("startingWeb", "Starting webserver");
