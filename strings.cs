@@ -26,6 +26,7 @@ namespace server_manager
                 errors.Add("notInArgs", "Arguement not found in args");
                 errors.Add("invalidDict", "Dictonary invalid");
                 errors.Add("cmdNotFound", "Command not found");
+                errors.Add("noCmd", "command for {name} not found");
 
                 // Notices
                 notice.Add("startingWeb", "Starting webserver");
