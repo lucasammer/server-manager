@@ -17,6 +17,8 @@ namespace server_manager
         
         public void setStrings(string loc)
         {
+            errors.Clear();
+            notice.Clear();
             if(loc == "en" || loc == "default")
             {
                 // Errors
@@ -31,6 +33,7 @@ namespace server_manager
             else
             {
                 Console.WriteLine("Invalid language, using default");
+                setStrings("default");
             }
         }
     }

@@ -34,6 +34,8 @@ namespace server_manager
                 webserver Server = new webserver(port);
             }
 
+            s.setStrings(loc);
+
             Console.Title = "Server Manager by LucasAmmer";
             while (true)
             {
