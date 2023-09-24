@@ -34,11 +34,40 @@ namespace server_manager
                 webserver Server = new webserver(port);
             }
 
+            s.setStrings(loc);
+
             Console.Title = "Server Manager by LucasAmmer";
             while (true)
             {
-
+                string inp = Console.ReadLine();
+                string[] arguements = inp.Trim().Split(" ");
+                string command = arguements[0];
+                switch (command)
+                {
+                    case "status":
+                        Console.WriteLine("Alive");
+                        break;
+                    case "start":
+                        start(arguements[1]);
+                        break;
+                    case "stop":
+                        stop(arguements[1]);
+                        break;
+                    default:
+                        Console.WriteLine(getstring("cmdNotFound", strings.dicts.errors));
+                        break;
+                }
             }
+        }
+
+        public static void start(string projectName)
+        {
+            throw new NotImplementedException();
+        } 
+
+        public static void stop(string projectName)
+        {
+            throw new NotImplementedException();
         }
 
         public static string getstring(string key, strings.dicts dict)

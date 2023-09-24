@@ -17,12 +17,16 @@ namespace server_manager
         
         public void setStrings(string loc)
         {
+            errors.Clear();
+            notice.Clear();
             if(loc == "en" || loc == "default")
             {
                 // Errors
                 errors.Add("noValue", "No value set!");
                 errors.Add("notInArgs", "Arguement not found in args");
                 errors.Add("invalidDict", "Dictonary invalid");
+                errors.Add("cmdNotFound", "Command not found");
+                errors.Add("noCmd", "command for {name} not found");
 
                 // Notices
                 notice.Add("startingWeb", "Starting webserver");
@@ -30,6 +34,7 @@ namespace server_manager
             else
             {
                 Console.WriteLine("Invalid language, using default");
+                setStrings("default");
             }
         }
     }
