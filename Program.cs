@@ -42,21 +42,26 @@ namespace server_manager
                 string inp = Console.ReadLine();
                 string[] arguements = inp.Trim().Split(" ");
                 string command = arguements[0];
-                switch (command)
-                {
-                    case "status":
-                        Console.WriteLine("Alive");
-                        break;
-                    case "start":
-                        start(arguements[1]);
-                        break;
-                    case "stop":
-                        stop(arguements[1]);
-                        break;
-                    default:
-                        Console.WriteLine(getstring("cmdNotFound", strings.dicts.errors));
-                        break;
-                }
+                handle(command, arguements);
+            }
+        }
+
+        public static void handle(string command, string[] args)
+        {
+            switch (command)
+            {
+                case "status":
+                    Console.WriteLine("Alive");
+                    break;
+                case "start":
+                    start(args[1]);
+                    break;
+                case "stop":
+                    stop(args[1]);
+                    break;
+                default:
+                    Console.WriteLine(getstring("cmdNotFound", strings.dicts.errors));
+                    break;
             }
         }
 
